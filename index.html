@@ -1,22 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>КВАДРАТ — Элитная Недвижимость</title>
-    <meta name="description" content="КВАДРАТ — портал элитной недвижимости. Премиальные объекты, опытные агенты, безупречный сервис."/>
+
+    <!-- ─── SEO: основные ─── -->
+    <title>КВАДРАТ — Агентство элитной недвижимости Москвы</title>
+    <meta name="description" content="КВАДРАТ — агентство элитной недвижимости в Москве и Подмосковье. Пентхаусы, виллы, апартаменты премиум-класса. 20 лет опыта, 1200+ сделок. Бесплатная консультация."/>
+    <meta name="keywords" content="элитная недвижимость Москва, купить пентхаус Москва, купить виллу Подмосковье, агентство недвижимости, элитные апартаменты, недвижимость премиум класс, КВАДРАТ недвижимость"/>
+    <meta name="author" content="Агентство недвижимости КВАДРАТ"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://kvadrat-estate.ru/"/>
+
+    <!-- ─── SEO: geo (Москва) ─── -->
+    <meta name="geo.region" content="RU-MOW"/>
+    <meta name="geo.placename" content="Москва"/>
+    <meta name="geo.position" content="55.7494;37.5398"/>
+    <meta name="ICBM" content="55.7494, 37.5398"/>
+
+    <!-- ─── Open Graph (превью в Telegram, VK, WhatsApp) ─── -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:site_name" content="КВАДРАТ — Элитная недвижимость"/>
+    <meta property="og:title" content="КВАДРАТ — Агентство элитной недвижимости Москвы"/>
+    <meta property="og:description" content="Пентхаусы, виллы и апартаменты премиум-класса в Москве и Подмосковье. 20 лет на рынке, 1200+ успешных сделок. Бесплатная консультация."/>
+    <meta property="og:url" content="https://kvadrat-estate.ru/"/>
+    <meta property="og:image" content="https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/files/34ef97d2-003c-4dbb-a904-ed70b22a4e08.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="КВАДРАТ — Элитная недвижимость Москвы"/>
+
+    <!-- ─── Twitter Card ─── -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="КВАДРАТ — Агентство элитной недвижимости Москвы"/>
+    <meta name="twitter:description" content="Пентхаусы, виллы и апартаменты премиум-класса. 20 лет опыта, 1200+ сделок."/>
+    <meta name="twitter:image" content="https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/files/34ef97d2-003c-4dbb-a904-ed70b22a4e08.jpg"/>
+
+    <!-- ─── Шрифты ─── -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="author" content="poehali.dev"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta property="og:title" content="Поехали!">
-    <meta property="og:description" content="Ваш личный программист, который делает сайты в 30 раз быстрее обычного.">
-    <meta property="og:image:width" content="4800">
-    <meta property="og:image:height" content="2520">
-    <meta property="og:image:alt" content="Поехали! — сервис разработки сайтов с помощью ИИ">
-    <meta property="og:image" content="https://cdn.poehali.dev/intertnal/img/og.png">
-    <meta name="twitter:image" content="https://cdn.poehali.dev/intertnal/img/og.png">
+
+    <!-- ─── Иконка ─── -->
+    <link rel="icon" type="image/png" href="https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/bucket/20d35dd4-1e7d-49f5-b32f-c12477872400.png"/>
+
+    <!-- ─── JSON-LD: структурированные данные для Google ─── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Агентство недвижимости КВАДРАТ",
+      "url": "https://kvadrat-estate.ru",
+      "logo": "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/bucket/20d35dd4-1e7d-49f5-b32f-c12477872400.png",
+      "description": "Агентство элитной недвижимости Москвы и Подмосковья. Пентхаусы, виллы, апартаменты премиум-класса.",
+      "telephone": "+7-495-123-45-67",
+      "email": "info@kvadrat-estate.ru",
+      "foundingDate": "2004",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Пресненская набережная, 10",
+        "addressLocality": "Москва",
+        "addressRegion": "Москва",
+        "postalCode": "123112",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.7494,
+        "longitude": 37.5398
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday","Sunday"],
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "422"
+      }
+    }
+    </script>
 
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
 
