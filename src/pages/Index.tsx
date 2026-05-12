@@ -207,51 +207,26 @@ function AgentCard({ agent: a }: { agent: typeof agents[0] }) {
 function HomePage({ onNav }: { onNav: (p: Page) => void }) {
   return (
     <div>
-      {/* Hero — компактный */}
-      <section className="relative h-[55vh] min-h-[360px] md:h-[65vh] md:min-h-[500px] flex items-end overflow-hidden">
-        <img src={HERO_IMAGE} alt="Элитная недвижимость" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="hero-overlay absolute inset-0" />
-        <div className="relative z-10 w-full">
-          {/* Stats bar */}
-          <div className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
-            <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between gap-4">
-              <div className="flex gap-6 md:gap-10">
-                {[{ value: "20+", label: "лет" }, { value: "1 200+", label: "сделок" }, { value: "98%", label: "рекомендуют" }].map((s) => (
-                  <div key={s.label}>
-                    <span className="font-display text-lg md:text-2xl text-gold">{s.value} </span>
-                    <span className="font-body text-[10px] text-foreground/50 uppercase">{s.label}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-2">
-                <button onClick={() => onNav("catalog")}
-                  className="bg-gold text-primary-foreground font-body text-[10px] md:text-xs tracking-widest uppercase px-4 py-2 hover:bg-gold-light transition-colors">
-                  Каталог
-                </button>
-                <button onClick={() => onNav("contacts")}
-                  className="hidden md:block border border-foreground/30 text-foreground font-body text-xs tracking-widest uppercase px-4 py-2 hover:border-gold hover:text-gold transition-colors">
-                  Консультация
-                </button>
-              </div>
-            </div>
+      {/* Шапка-бар с фильтрами вместо hero */}
+      <div className="border-b border-border bg-card">
+        <div className="max-w-7xl mx-auto px-3 md:px-6 py-3 flex items-center justify-between gap-3">
+          <div className="flex gap-2 overflow-x-auto scrollbar-thin flex-1">
+            {propertyTypes.map((t) => (
+              <button key={t} onClick={() => onNav("catalog")}
+                className="flex-shrink-0 filter-pill font-body text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-full whitespace-nowrap">
+                {t}
+              </button>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* Фильтр-пилюли (мобиль) */}
-      <div className="md:hidden sticky top-12 z-40 bg-background border-b border-border px-3 py-2">
-        <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-0.5">
-          {propertyTypes.map((t) => (
-            <button key={t} onClick={() => onNav("catalog")}
-              className="flex-shrink-0 filter-pill font-body text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-full whitespace-nowrap">
-              {t}
-            </button>
-          ))}
+          <button onClick={() => onNav("contacts")}
+            className="flex-shrink-0 bg-gold text-primary-foreground font-body text-[10px] tracking-widest uppercase px-3 py-1.5 hover:bg-gold-light transition-colors whitespace-nowrap">
+            Консультация
+          </button>
         </div>
       </div>
 
       {/* ВСЕ объекты сразу — плотная сетка */}
-      <section className="max-w-7xl mx-auto px-3 md:px-6 py-4 md:py-8">
+      <section className="max-w-7xl mx-auto px-3 md:px-6 py-4 md:py-6">
         {/* Заголовок секции — компактный */}
         <div className="flex items-center justify-between mb-3 md:mb-6">
           <div className="flex items-center gap-3">
