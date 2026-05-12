@@ -5,12 +5,18 @@ const HERO_IMAGE = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5
 const VILLA_IMAGE = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/files/ce267202-09f2-478f-b90a-5813d32c1c4f.jpg";
 
 const properties = [
-  { id: 1, title: "Пентхаус «Северная Звезда»", location: "Москва, Пресненская набережная", price: "185 000 000 ₽", type: "Пентхаус", area: "320 м²", rooms: 5, floor: "42 этаж", image: HERO_IMAGE, tag: "Эксклюзив" },
-  { id: 2, title: "Вилла «Серебряный Бор»", location: "Подмосковье, Рублёво-Успенское ш.", price: "420 000 000 ₽", type: "Вилла", area: "780 м²", rooms: 8, floor: "2 этажа", image: VILLA_IMAGE, tag: "Новинка" },
-  { id: 3, title: "Апартаменты «Патриарши»", location: "Москва, Патриаршие пруды", price: "95 000 000 ₽", type: "Апартаменты", area: "180 м²", rooms: 3, floor: "7 этаж", image: HERO_IMAGE, tag: null },
-  { id: 4, title: "Таунхаус «Дубровка»", location: "Москва, Рублёвское ш.", price: "260 000 000 ₽", type: "Таунхаус", area: "450 м²", rooms: 6, floor: "3 этажа", image: VILLA_IMAGE, tag: null },
-  { id: 5, title: "Пентхаус «Алые Паруса»", location: "Москва, Хорошёвское ш.", price: "145 000 000 ₽", type: "Пентхаус", area: "240 м²", rooms: 4, floor: "34 этаж", image: HERO_IMAGE, tag: "Горячее" },
-  { id: 6, title: "Усадьба «Николина Гора»", location: "Подмосковье, Николина Гора", price: "580 000 000 ₽", type: "Усадьба", area: "1200 м²", rooms: 12, floor: "2 этажа", image: VILLA_IMAGE, tag: "Эксклюзив" },
+  { id: 1,  title: "Пентхаус «Северная Звезда»",   location: "Пресненская набережная",        price: "185 000 000 ₽", type: "Пентхаус",    area: "320 м²",  rooms: 5,  floor: "42 эт.", image: HERO_IMAGE,  tag: "Эксклюзив" },
+  { id: 2,  title: "Вилла «Серебряный Бор»",        location: "Рублёво-Успенское ш.",          price: "420 000 000 ₽", type: "Вилла",        area: "780 м²",  rooms: 8,  floor: "2 эт.",  image: VILLA_IMAGE, tag: "Новинка"   },
+  { id: 3,  title: "Апартаменты «Патриарши»",       location: "Патриаршие пруды",              price: "95 000 000 ₽",  type: "Апартаменты", area: "180 м²",  rooms: 3,  floor: "7 эт.",  image: HERO_IMAGE,  tag: null        },
+  { id: 4,  title: "Таунхаус «Дубровка»",           location: "Рублёвское ш., Москва",         price: "260 000 000 ₽", type: "Таунхаус",    area: "450 м²",  rooms: 6,  floor: "3 эт.",  image: VILLA_IMAGE, tag: null        },
+  { id: 5,  title: "Пентхаус «Алые Паруса»",        location: "Хорошёвское ш., Москва",        price: "145 000 000 ₽", type: "Пентхаус",    area: "240 м²",  rooms: 4,  floor: "34 эт.", image: HERO_IMAGE,  tag: "Горячее"  },
+  { id: 6,  title: "Усадьба «Николина Гора»",        location: "Николина Гора, Подмосковье",    price: "580 000 000 ₽", type: "Усадьба",     area: "1200 м²", rooms: 12, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Эксклюзив" },
+  { id: 7,  title: "Апартаменты «Арбат»",           location: "Арбат, Москва",                 price: "78 000 000 ₽",  type: "Апартаменты", area: "145 м²",  rooms: 3,  floor: "5 эт.",  image: VILLA_IMAGE, tag: null        },
+  { id: 8,  title: "Вилла «Сосновый Бор»",          location: "Новорижское ш., Подмосковье",   price: "310 000 000 ₽", type: "Вилла",        area: "620 м²",  rooms: 7,  floor: "2 эт.",  image: HERO_IMAGE,  tag: "Новинка"  },
+  { id: 9,  title: "Таунхаус «Куркино»",            location: "Куркино, Москва",               price: "88 000 000 ₽",  type: "Таунхаус",    area: "280 м²",  rooms: 4,  floor: "2 эт.",  image: VILLA_IMAGE, tag: null        },
+  { id: 10, title: "Пентхаус «Москва-Сити»",        location: "Пресня Сити, Москва",           price: "320 000 000 ₽", type: "Пентхаус",    area: "410 м²",  rooms: 6,  floor: "55 эт.", image: HERO_IMAGE,  tag: "Эксклюзив" },
+  { id: 11, title: "Апартаменты «Замоскворечье»",   location: "Замоскворечье, Москва",         price: "62 000 000 ₽",  type: "Апартаменты", area: "120 м²",  rooms: 2,  floor: "4 эт.",  image: HERO_IMAGE,  tag: null        },
+  { id: 12, title: "Усадьба «Барвиха»",             location: "Барвиха, Подмосковье",          price: "890 000 000 ₽", type: "Усадьба",     area: "1800 м²", rooms: 14, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Горячее"  },
 ];
 
 const agents = [
@@ -29,7 +35,7 @@ function StarRating({ rating, max = 5 }: { rating: number; max?: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: max }).map((_, i) => (
-        <span key={i} className={i < rating ? "star-filled" : "star-empty"} style={{ fontSize: 13 }}>★</span>
+        <span key={i} className={i < rating ? "star-filled" : "star-empty"} style={{ fontSize: 12 }}>★</span>
       ))}
     </div>
   );
@@ -46,9 +52,7 @@ function Navbar({ current, onNav }: { current: Page; onNav: (p: Page) => void })
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 nav-blur hidden md:block">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <button onClick={() => onNav("home")} className="font-display text-2xl font-light tracking-[0.15em] text-gold">
-          КВАДРАТ
-        </button>
+        <button onClick={() => onNav("home")} className="font-display text-2xl font-light tracking-[0.15em] text-gold">КВАДРАТ</button>
         <div className="flex items-center gap-8">
           {links.map((l) => (
             <button key={l.page} onClick={() => onNav(l.page)}
@@ -58,7 +62,7 @@ function Navbar({ current, onNav }: { current: Page; onNav: (p: Page) => void })
           ))}
         </div>
         <button onClick={() => onNav("account")}
-          className="flex items-center gap-2 border border-gold/40 text-gold text-xs tracking-widest uppercase px-4 py-2 hover:bg-gold/10 transition-colors duration-200">
+          className="flex items-center gap-2 border border-gold/40 text-gold text-xs tracking-widest uppercase px-4 py-2 hover:bg-gold/10 transition-colors">
           <Icon name="User" size={14} />Кабинет
         </button>
       </div>
@@ -68,18 +72,9 @@ function Navbar({ current, onNav }: { current: Page; onNav: (p: Page) => void })
 
 /* ─── MOBILE TOP BAR ─── */
 function MobileTopBar({ current, onNav }: { current: Page; onNav: (p: Page) => void }) {
-  const titles: Record<Page, string> = {
-    home: "КВАДРАТ",
-    catalog: "Каталог",
-    about: "О компании",
-    contacts: "Контакты",
-    account: "Личный кабинет",
-  };
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 md:hidden nav-blur h-14 flex items-center px-4 justify-between">
-      <button onClick={() => onNav("home")} className="font-display text-xl font-light tracking-[0.15em] text-gold">
-        {current === "home" ? "КВАДРАТ" : <span className="text-foreground text-base">{titles[current]}</span>}
-      </button>
+    <header className="fixed top-0 left-0 right-0 z-50 md:hidden nav-blur h-12 flex items-center px-4 justify-between">
+      <button onClick={() => onNav("home")} className="font-display text-lg font-light tracking-[0.15em] text-gold">КВАДРАТ</button>
       <button onClick={() => onNav("catalog")}
         className="flex items-center gap-1.5 bg-gold/10 border border-gold/30 text-gold text-xs px-3 py-1.5 rounded-full">
         <Icon name="Search" size={13} />Поиск
@@ -88,26 +83,24 @@ function MobileTopBar({ current, onNav }: { current: Page; onNav: (p: Page) => v
   );
 }
 
-/* ─── MOBILE BOTTOM NAV (Авито-стиль) ─── */
+/* ─── MOBILE BOTTOM NAV ─── */
 function MobileBottomNav({ current, onNav }: { current: Page; onNav: (p: Page) => void }) {
   const items: { icon: string; label: string; page: Page }[] = [
-    { icon: "Home", label: "Главная", page: "home" },
-    { icon: "Search", label: "Каталог", page: "catalog" },
-    { icon: "Heart", label: "Избранное", page: "account" },
+    { icon: "Home",          label: "Главная",  page: "home"     },
+    { icon: "Search",        label: "Каталог",  page: "catalog"  },
+    { icon: "Heart",         label: "Избранное",page: "account"  },
     { icon: "MessageCircle", label: "Контакты", page: "contacts" },
-    { icon: "User", label: "Профиль", page: "account" },
+    { icon: "User",          label: "Профиль",  page: "account"  },
   ];
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-card border-t border-border"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}>
       <div className="flex">
         {items.map((item) => (
-          <button key={item.page + item.icon} onClick={() => onNav(item.page)}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-3 transition-colors ${
-              current === item.page ? "text-gold" : "text-muted-foreground"
-            }`}>
-            <Icon name={item.icon as "Home"} size={22} />
-            <span className="font-body text-[10px] tracking-wide">{item.label}</span>
+          <button key={item.icon} onClick={() => onNav(item.page)}
+            className={`flex-1 flex flex-col items-center gap-0.5 py-2.5 transition-colors ${current === item.page ? "text-gold" : "text-muted-foreground"}`}>
+            <Icon name={item.icon as "Home"} size={21} />
+            <span className="font-body text-[9px] tracking-wide">{item.label}</span>
           </button>
         ))}
       </div>
@@ -115,78 +108,67 @@ function MobileBottomNav({ current, onNav }: { current: Page; onNav: (p: Page) =
   );
 }
 
-/* ─── PROPERTY CARD (мобильный горизонтальный + десктоп вертикальный) ─── */
-function PropertyCard({ property: p, delay = 0, horizontal = false }: {
-  property: typeof properties[0]; delay?: number; horizontal?: boolean
-}) {
-  if (horizontal) {
-    return (
-      <div className="luxury-card overflow-hidden flex cursor-pointer animate-fadeInUp"
-        style={{ animationDelay: `${delay}ms` }}>
-        <div className="relative w-32 flex-shrink-0">
-          <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
-          {p.tag && (
-            <span className="absolute top-2 left-2 bg-gold text-primary-foreground font-body text-[9px] tracking-widest uppercase px-2 py-0.5">
-              {p.tag}
-            </span>
-          )}
-        </div>
-        <div className="p-3 flex flex-col justify-between flex-1 min-w-0">
-          <div>
-            <span className="font-body text-[10px] uppercase tracking-wider text-muted-foreground">{p.type}</span>
-            <h3 className="font-display text-base font-medium leading-tight mt-0.5 truncate">{p.title}</h3>
-            <div className="flex items-center gap-1 text-muted-foreground mt-1">
-              <Icon name="MapPin" size={10} />
-              <span className="font-body text-[11px] truncate">{p.location}</span>
-            </div>
-          </div>
-          <div>
-            <div className="flex items-center gap-3 text-[11px] text-muted-foreground font-body mt-2">
-              <span>{p.area}</span>
-              <span>{p.rooms} комн.</span>
-              <span>{p.floor}</span>
-            </div>
-            <div className="flex items-center justify-between mt-2">
-              <span className="font-display text-base text-gold font-medium">{p.price}</span>
-              <button className="bg-gold/10 border border-gold/30 text-gold text-[10px] px-2 py-1 font-body tracking-wider">
-                Подробнее
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
+/* ─── PROPERTY CARD горизонтальная (мобиль) ─── */
+function PropertyCardH({ p, delay = 0 }: { p: typeof properties[0]; delay?: number }) {
   return (
-    <div className="luxury-card overflow-hidden group cursor-pointer animate-fadeInUp"
-      style={{ animationDelay: `${delay}ms` }}>
-      <div className="relative overflow-hidden h-52">
-        <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+    <div className="luxury-card overflow-hidden flex cursor-pointer" style={{ animationDelay: `${delay}ms` }}>
+      <div className="relative w-28 flex-shrink-0">
+        <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
         {p.tag && (
-          <span className="absolute top-4 left-4 bg-gold text-primary-foreground font-body text-xs tracking-widest uppercase px-3 py-1">
+          <span className="absolute top-1.5 left-1.5 bg-gold text-primary-foreground font-body text-[8px] tracking-widest uppercase px-1.5 py-0.5">
             {p.tag}
           </span>
         )}
-        <span className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-foreground/80 font-body text-xs px-3 py-1">
-          {p.type}
-        </span>
       </div>
-      <div className="p-5">
-        <h3 className="font-display text-xl font-medium mb-1 group-hover:text-gold transition-colors">{p.title}</h3>
-        <div className="flex items-center gap-1.5 text-muted-foreground mb-3">
-          <Icon name="MapPin" size={12} />
-          <span className="font-body text-xs">{p.location}</span>
+      <div className="p-3 flex flex-col justify-between flex-1 min-w-0">
+        <div>
+          <span className="font-body text-[9px] uppercase tracking-wider text-muted-foreground">{p.type}</span>
+          <h3 className="font-display text-[15px] font-medium leading-tight mt-0.5 line-clamp-2">{p.title}</h3>
+          <div className="flex items-center gap-1 text-muted-foreground mt-0.5">
+            <Icon name="MapPin" size={9} />
+            <span className="font-body text-[10px] truncate">{p.location}</span>
+          </div>
         </div>
-        <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4 font-body">
-          <span className="flex items-center gap-1"><Icon name="Maximize2" size={11} />{p.area}</span>
-          <span className="flex items-center gap-1"><Icon name="BedDouble" size={11} />{p.rooms} комн.</span>
-          <span className="flex items-center gap-1"><Icon name="Building2" size={11} />{p.floor}</span>
+        <div>
+          <div className="flex items-center gap-2.5 text-[10px] text-muted-foreground font-body mt-1.5">
+            <span>{p.area}</span><span>{p.rooms} комн.</span><span>{p.floor}</span>
+          </div>
+          <div className="flex items-center justify-between mt-1.5">
+            <span className="font-display text-[15px] text-gold font-medium">{p.price}</span>
+            <button className="text-[9px] font-body tracking-wider text-gold border border-gold/30 px-2 py-0.5">Смотреть</button>
+          </div>
         </div>
-        <div className="flex items-center justify-between pt-4 border-t border-border">
-          <span className="font-display text-xl text-gold font-medium">{p.price}</span>
-          <button className="font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-gold transition-colors flex items-center gap-1">
-            Подробнее <Icon name="ArrowRight" size={12} />
+      </div>
+    </div>
+  );
+}
+
+/* ─── PROPERTY CARD вертикальная (десктоп) ─── */
+function PropertyCardV({ p, delay = 0 }: { p: typeof properties[0]; delay?: number }) {
+  return (
+    <div className="luxury-card overflow-hidden group cursor-pointer" style={{ animationDelay: `${delay}ms` }}>
+      <div className="relative overflow-hidden h-48">
+        <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        {p.tag && (
+          <span className="absolute top-3 left-3 bg-gold text-primary-foreground font-body text-[10px] tracking-widest uppercase px-2.5 py-0.5">{p.tag}</span>
+        )}
+        <span className="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-foreground/80 font-body text-[10px] px-2 py-0.5">{p.type}</span>
+      </div>
+      <div className="p-4">
+        <h3 className="font-display text-lg font-medium mb-0.5 group-hover:text-gold transition-colors line-clamp-1">{p.title}</h3>
+        <div className="flex items-center gap-1 text-muted-foreground mb-2">
+          <Icon name="MapPin" size={11} />
+          <span className="font-body text-xs truncate">{p.location}</span>
+        </div>
+        <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3 font-body">
+          <span className="flex items-center gap-1"><Icon name="Maximize2" size={10} />{p.area}</span>
+          <span className="flex items-center gap-1"><Icon name="BedDouble" size={10} />{p.rooms} комн.</span>
+          <span className="flex items-center gap-1"><Icon name="Building2" size={10} />{p.floor}</span>
+        </div>
+        <div className="flex items-center justify-between pt-3 border-t border-border">
+          <span className="font-display text-lg text-gold font-medium">{p.price}</span>
+          <button className="font-body text-[10px] tracking-widest uppercase text-foreground/50 hover:text-gold transition-colors flex items-center gap-1">
+            Подробнее <Icon name="ArrowRight" size={11} />
           </button>
         </div>
       </div>
@@ -196,33 +178,26 @@ function PropertyCard({ property: p, delay = 0, horizontal = false }: {
 
 function AgentCard({ agent: a }: { agent: typeof agents[0] }) {
   return (
-    <div className="luxury-card p-5">
-      <div className="flex items-start gap-3 mb-4">
-        <div className="w-12 h-12 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center font-display text-lg text-gold flex-shrink-0">
-          {a.avatar}
-        </div>
+    <div className="luxury-card p-4">
+      <div className="flex items-start gap-3 mb-3">
+        <div className="w-11 h-11 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center font-display text-base text-gold flex-shrink-0">{a.avatar}</div>
         <div className="min-w-0">
           <h3 className="font-display text-lg font-medium leading-tight">{a.name}</h3>
-          <p className="font-body text-[10px] text-muted-foreground uppercase tracking-wider mt-0.5">{a.title}</p>
-          <div className="flex items-center gap-1.5 mt-1.5">
+          <p className="font-body text-[9px] text-muted-foreground uppercase tracking-wider">{a.title}</p>
+          <div className="flex items-center gap-1.5 mt-1">
             <StarRating rating={a.rating} />
-            <span className="font-body text-xs text-muted-foreground">({a.reviews})</span>
+            <span className="font-body text-[10px] text-muted-foreground">({a.reviews})</span>
           </div>
         </div>
       </div>
-      <p className="font-body text-[11px] text-muted-foreground uppercase tracking-wider mb-3">{a.specialization}</p>
+      <p className="font-body text-[10px] text-muted-foreground uppercase tracking-wider mb-2">{a.specialization}</p>
       <div className="border-t border-border pt-3">
-        <p className="font-body text-sm text-foreground/70 italic mb-2">«{a.review}»</p>
-        <p className="font-body text-xs text-gold">— {a.reviewer}</p>
+        <p className="font-body text-xs text-foreground/70 italic mb-1.5">«{a.review}»</p>
+        <p className="font-body text-[10px] text-gold">— {a.reviewer}</p>
       </div>
-      <div className="flex items-center justify-between mt-4 pt-4 border-t border-border">
-        <div>
-          <div className="font-display text-2xl text-gold">{a.deals}</div>
-          <div className="font-body text-[10px] text-muted-foreground">сделок</div>
-        </div>
-        <button className="border border-gold/40 text-gold font-body text-xs tracking-widest uppercase px-4 py-2 hover:bg-gold/10 transition-colors">
-          Написать
-        </button>
+      <div className="flex items-center justify-between mt-3 pt-3 border-t border-border">
+        <div><div className="font-display text-xl text-gold">{a.deals}</div><div className="font-body text-[9px] text-muted-foreground">сделок</div></div>
+        <button className="border border-gold/40 text-gold font-body text-[10px] tracking-widest uppercase px-3 py-1.5 hover:bg-gold/10 transition-colors">Написать</button>
       </div>
     </div>
   );
@@ -232,63 +207,56 @@ function AgentCard({ agent: a }: { agent: typeof agents[0] }) {
 function HomePage({ onNav }: { onNav: (p: Page) => void }) {
   return (
     <div>
-      {/* Hero — меньше на мобильном */}
-      <section className="relative h-[70vh] min-h-[480px] md:h-screen flex items-end overflow-hidden">
+      {/* Hero — компактный */}
+      <section className="relative h-[55vh] min-h-[360px] md:h-[65vh] md:min-h-[500px] flex items-end overflow-hidden">
         <img src={HERO_IMAGE} alt="Элитная недвижимость" className="absolute inset-0 w-full h-full object-cover" />
         <div className="hero-overlay absolute inset-0" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pb-20 md:pb-28 w-full">
-          <div className="animate-fadeInUp">
-            <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-gold mb-3">Портал элитной недвижимости</p>
-            <h1 className="font-display text-4xl md:text-8xl font-light leading-tight text-foreground mb-4">
-              Жизнь на<br />
-              <em className="gold-shimmer not-italic">высшем уровне</em>
-            </h1>
-            <p className="font-body text-xs md:text-sm text-foreground/60 max-w-sm mb-6 leading-relaxed">
-              Эксклюзивные объекты Москвы и Подмосковья. Более 20 лет на рынке.
-            </p>
-          </div>
-          <div className="animate-fadeInUp delay-300 flex gap-3">
-            <button onClick={() => onNav("catalog")}
-              className="bg-gold text-primary-foreground font-body text-[11px] tracking-widest uppercase px-5 py-3 md:px-8 md:py-4 hover:bg-gold-light transition-colors duration-300">
-              Смотреть каталог
-            </button>
-            <button onClick={() => onNav("contacts")}
-              className="border border-foreground/30 text-foreground font-body text-[11px] tracking-widest uppercase px-5 py-3 md:px-8 md:py-4 hover:border-gold hover:text-gold transition-colors duration-300">
-              Связаться
-            </button>
-          </div>
-        </div>
-        {/* Stats */}
-        <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-black/40 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 py-3 grid grid-cols-3 gap-2">
-            {[{ value: "20+", label: "лет опыта" }, { value: "1 200+", label: "сделок" }, { value: "98%", label: "рекомендуют" }].map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="font-display text-lg md:text-2xl font-light text-gold">{s.value}</div>
-                <div className="font-body text-[9px] md:text-xs text-foreground/50 uppercase tracking-wider">{s.label}</div>
+        <div className="relative z-10 w-full">
+          {/* Stats bar */}
+          <div className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between gap-4">
+              <div className="flex gap-6 md:gap-10">
+                {[{ value: "20+", label: "лет" }, { value: "1 200+", label: "сделок" }, { value: "98%", label: "рекомендуют" }].map((s) => (
+                  <div key={s.label}>
+                    <span className="font-display text-lg md:text-2xl text-gold">{s.value} </span>
+                    <span className="font-body text-[10px] text-foreground/50 uppercase">{s.label}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div className="flex gap-2">
+                <button onClick={() => onNav("catalog")}
+                  className="bg-gold text-primary-foreground font-body text-[10px] md:text-xs tracking-widest uppercase px-4 py-2 hover:bg-gold-light transition-colors">
+                  Каталог
+                </button>
+                <button onClick={() => onNav("contacts")}
+                  className="hidden md:block border border-foreground/30 text-foreground font-body text-xs tracking-widest uppercase px-4 py-2 hover:border-gold hover:text-gold transition-colors">
+                  Консультация
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Quick filters — мобильный скролл */}
-      <div className="md:hidden sticky top-14 z-40 bg-background border-b border-border px-4 py-2">
-        <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-1">
+      {/* Фильтр-пилюли (мобиль) */}
+      <div className="md:hidden sticky top-12 z-40 bg-background border-b border-border px-3 py-2">
+        <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-0.5">
           {propertyTypes.map((t) => (
             <button key={t} onClick={() => onNav("catalog")}
-              className="flex-shrink-0 filter-pill font-body text-[11px] tracking-wider uppercase px-3 py-1.5 rounded-full">
+              className="flex-shrink-0 filter-pill font-body text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-full whitespace-nowrap">
               {t}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Топ объекты */}
-      <section className="py-8 md:py-24 max-w-7xl mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between mb-5 md:mb-12">
-          <div>
-            <p className="font-body text-[10px] tracking-[0.25em] uppercase text-gold mb-1 md:mb-3">Избранное</p>
-            <h2 className="font-display text-3xl md:text-5xl font-light">Топ объекты</h2>
+      {/* ВСЕ объекты сразу — плотная сетка */}
+      <section className="max-w-7xl mx-auto px-3 md:px-6 py-4 md:py-8">
+        {/* Заголовок секции — компактный */}
+        <div className="flex items-center justify-between mb-3 md:mb-6">
+          <div className="flex items-center gap-3">
+            <h2 className="font-display text-2xl md:text-4xl font-light">Объекты в продаже</h2>
+            <span className="font-body text-xs text-muted-foreground bg-card border border-border px-2 py-0.5">{properties.length}</span>
           </div>
           <button onClick={() => onNav("catalog")}
             className="flex items-center gap-1 font-body text-xs tracking-widest uppercase text-gold hover:text-gold-light transition-colors">
@@ -296,55 +264,33 @@ function HomePage({ onNav }: { onNav: (p: Page) => void }) {
           </button>
         </div>
 
-        {/* Мобиль: горизонтальные карточки. Десктоп: сетка */}
-        <div className="md:hidden space-y-3">
-          {properties.slice(0, 4).map((p, i) => (
-            <PropertyCard key={p.id} property={p} delay={i * 60} horizontal />
-          ))}
+        {/* Мобиль: горизонтальные карточки — все 12 */}
+        <div className="md:hidden space-y-2">
+          {properties.map((p, i) => <PropertyCardH key={p.id} p={p} delay={i * 40} />)}
         </div>
-        <div className="hidden md:grid grid-cols-3 gap-6">
-          {properties.slice(0, 3).map((p, i) => (
-            <PropertyCard key={p.id} property={p} delay={i * 100} />
-          ))}
+
+        {/* Десктоп: 4 колонки */}
+        <div className="hidden md:grid grid-cols-4 gap-4">
+          {properties.map((p, i) => <PropertyCardV key={p.id} p={p} delay={i * 50} />)}
         </div>
       </section>
 
-      {/* Агенты */}
-      <section className="py-8 md:py-24 bg-card border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-16">
-            <p className="font-body text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Команда</p>
-            <h2 className="font-display text-3xl md:text-5xl font-light">Наши эксперты</h2>
+      {/* Агенты — компактно, под объектами */}
+      <section className="border-t border-border bg-card py-6 md:py-10">
+        <div className="max-w-7xl mx-auto px-3 md:px-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-display text-2xl md:text-3xl font-light">Наши агенты</h2>
+            <button onClick={() => onNav("about")} className="font-body text-xs text-gold flex items-center gap-1 uppercase tracking-widest">
+              О нас <Icon name="ArrowRight" size={12} />
+            </button>
           </div>
           {/* Мобиль: горизонтальный скролл */}
-          <div className="md:hidden flex gap-4 overflow-x-auto scrollbar-thin pb-2 -mx-4 px-4">
-            {agents.map((a) => (
-              <div key={a.id} className="flex-shrink-0 w-72">
-                <AgentCard agent={a} />
-              </div>
-            ))}
+          <div className="md:hidden flex gap-3 overflow-x-auto scrollbar-thin pb-1 -mx-3 px-3">
+            {agents.map((a) => <div key={a.id} className="flex-shrink-0 w-64"><AgentCard agent={a} /></div>)}
           </div>
-          <div className="hidden md:grid grid-cols-3 gap-8">
+          <div className="hidden md:grid grid-cols-3 gap-4">
             {agents.map((a) => <AgentCard key={a.id} agent={a} />)}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="relative py-16 md:py-32 overflow-hidden">
-        <img src={VILLA_IMAGE} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
-        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
-          <p className="font-body text-[10px] tracking-[0.25em] uppercase text-gold mb-3">Начните сейчас</p>
-          <h2 className="font-display text-3xl md:text-6xl font-light mb-4 leading-tight">
-            Найдите объект<br />вашей мечты
-          </h2>
-          <p className="font-body text-xs md:text-sm text-foreground/60 mb-7">
-            Консультация бесплатно. Ответим за 30 минут.
-          </p>
-          <button onClick={() => onNav("contacts")}
-            className="bg-gold text-primary-foreground font-body text-xs tracking-widest uppercase px-8 py-4 hover:bg-gold-light transition-colors duration-300 w-full md:w-auto">
-            Получить консультацию
-          </button>
         </div>
       </section>
     </div>
@@ -361,113 +307,93 @@ function CatalogPage() {
   const filtered = properties.filter((p) => selectedType === "Все" || p.type === selectedType);
 
   return (
-    <div className="pt-14 md:pt-24 min-h-screen">
-      {/* Мобильный sticky-хедер каталога */}
-      <div className="md:hidden sticky top-14 z-40 bg-background border-b border-border">
-        <div className="flex items-center gap-2 px-4 py-2">
+    <div className="pt-12 md:pt-16 min-h-screen">
+      {/* Мобильный фильтр-бар */}
+      <div className="md:hidden sticky top-12 z-40 bg-background border-b border-border">
+        <div className="flex items-center gap-2 px-3 py-2">
           <button onClick={() => setShowFilters(!showFilters)}
-            className={`flex items-center gap-1.5 border font-body text-xs px-3 py-1.5 rounded-full transition-colors ${showFilters ? "border-gold text-gold bg-gold/10" : "border-border text-foreground/60"}`}>
-            <Icon name="SlidersHorizontal" size={13} />Фильтры
+            className={`flex items-center gap-1 border font-body text-[10px] px-2.5 py-1.5 rounded-full transition-colors flex-shrink-0 ${showFilters ? "border-gold text-gold bg-gold/10" : "border-border text-foreground/60"}`}>
+            <Icon name="SlidersHorizontal" size={12} />Фильтры
           </button>
           <div className="flex gap-2 overflow-x-auto flex-1 scrollbar-thin">
-            {propertyTypes.slice(1).map((t) => (
-              <button key={t} onClick={() => setSelectedType(t === selectedType ? "Все" : t)}
-                className={`flex-shrink-0 filter-pill font-body text-[11px] tracking-wider uppercase px-3 py-1.5 rounded-full ${selectedType === t ? "active" : ""}`}>
+            {propertyTypes.map((t) => (
+              <button key={t} onClick={() => setSelectedType(t === selectedType && t !== "Все" ? "Все" : t)}
+                className={`flex-shrink-0 filter-pill font-body text-[10px] tracking-wider uppercase px-2.5 py-1.5 rounded-full whitespace-nowrap ${selectedType === t ? "active" : ""}`}>
                 {t}
               </button>
             ))}
           </div>
         </div>
-
         {showFilters && (
-          <div className="px-4 pb-3 space-y-3 border-t border-border bg-background">
+          <div className="px-3 pb-3 space-y-2.5 border-t border-border bg-background">
             <div>
-              <p className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-2 mt-2">Локация</p>
-              <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-1">
+              <p className="font-body text-[9px] uppercase tracking-widest text-muted-foreground mb-1.5 mt-2">Локация</p>
+              <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-0.5">
                 {locations.map((l) => (
                   <button key={l} onClick={() => setSelectedLocation(l)}
-                    className={`flex-shrink-0 filter-pill font-body text-[11px] px-3 py-1.5 rounded-full ${selectedLocation === l ? "active" : ""}`}>
-                    {l}
-                  </button>
+                    className={`flex-shrink-0 filter-pill font-body text-[10px] px-2.5 py-1.5 rounded-full whitespace-nowrap ${selectedLocation === l ? "active" : ""}`}>{l}</button>
                 ))}
               </div>
             </div>
             <div>
-              <p className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Цена</p>
-              <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-1">
+              <p className="font-body text-[9px] uppercase tracking-widest text-muted-foreground mb-1.5">Цена</p>
+              <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-0.5">
                 {priceRanges.map((r) => (
                   <button key={r} onClick={() => setSelectedPrice(r)}
-                    className={`flex-shrink-0 filter-pill font-body text-[11px] px-3 py-1.5 rounded-full ${selectedPrice === r ? "active" : ""}`}>
-                    {r}
-                  </button>
+                    className={`flex-shrink-0 filter-pill font-body text-[10px] px-2.5 py-1.5 rounded-full whitespace-nowrap ${selectedPrice === r ? "active" : ""}`}>{r}</button>
                 ))}
               </div>
             </div>
             <div className="flex items-center justify-between">
-              <span className="font-body text-xs text-muted-foreground">Найдено: <span className="text-gold">{filtered.length}</span></span>
+              <span className="font-body text-xs text-muted-foreground">Найдено: <span className="text-gold font-medium">{filtered.length}</span></span>
               <button onClick={() => { setSelectedType("Все"); setSelectedLocation("Все районы"); setSelectedPrice("Любая цена"); }}
-                className="font-body text-xs text-muted-foreground">Сбросить</button>
+                className="font-body text-[10px] text-muted-foreground underline">Сбросить</button>
             </div>
           </div>
         )}
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-5 md:py-12">
-        {/* Десктоп заголовок + фильтры */}
-        <div className="hidden md:block">
-          <p className="font-body text-xs tracking-[0.25em] uppercase text-gold mb-3">Недвижимость</p>
-          <h1 className="font-display text-5xl font-light mb-10">Каталог объектов</h1>
-          <div className="bg-card border border-border p-6 mb-10 space-y-5">
-            <div>
-              <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-3">Тип объекта</p>
-              <div className="flex flex-wrap gap-2">
-                {propertyTypes.map((t) => (
-                  <button key={t} onClick={() => setSelectedType(t)}
-                    className={`filter-pill font-body text-xs tracking-wider uppercase px-4 py-2 ${selectedType === t ? "active" : ""}`}>
-                    {t}
-                  </button>
+      <div className="max-w-7xl mx-auto px-3 md:px-6 py-3 md:py-8">
+        {/* Десктоп фильтры */}
+        <div className="hidden md:block mb-6">
+          <div className="flex items-center justify-between mb-4">
+            <h1 className="font-display text-4xl font-light">Каталог объектов</h1>
+            <span className="font-body text-sm text-muted-foreground">Найдено: <span className="text-gold font-medium">{filtered.length}</span></span>
+          </div>
+          <div className="bg-card border border-border p-4 space-y-3">
+            <div className="flex flex-wrap gap-2 items-center">
+              <span className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mr-1">Тип:</span>
+              {propertyTypes.map((t) => (
+                <button key={t} onClick={() => setSelectedType(t)}
+                  className={`filter-pill font-body text-[10px] tracking-wider uppercase px-3 py-1.5 ${selectedType === t ? "active" : ""}`}>{t}</button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-2 items-center">
+                <span className="font-body text-[10px] uppercase tracking-widest text-muted-foreground">Район:</span>
+                {locations.map((l) => (
+                  <button key={l} onClick={() => setSelectedLocation(l)}
+                    className={`filter-pill font-body text-[10px] tracking-wider px-3 py-1.5 ${selectedLocation === l ? "active" : ""}`}>{l}</button>
                 ))}
               </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-3">Локация</p>
-                <div className="flex flex-wrap gap-2">
-                  {locations.map((l) => (
-                    <button key={l} onClick={() => setSelectedLocation(l)}
-                      className={`filter-pill font-body text-xs tracking-wider px-4 py-2 ${selectedLocation === l ? "active" : ""}`}>
-                      {l}
-                    </button>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-2 items-center">
+                <span className="font-body text-[10px] uppercase tracking-widest text-muted-foreground">Цена:</span>
+                {priceRanges.map((r) => (
+                  <button key={r} onClick={() => setSelectedPrice(r)}
+                    className={`filter-pill font-body text-[10px] tracking-wider px-3 py-1.5 ${selectedPrice === r ? "active" : ""}`}>{r}</button>
+                ))}
               </div>
-              <div>
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-3">Цена</p>
-                <div className="flex flex-wrap gap-2">
-                  {priceRanges.map((r) => (
-                    <button key={r} onClick={() => setSelectedPrice(r)}
-                      className={`filter-pill font-body text-xs tracking-wider px-4 py-2 ${selectedPrice === r ? "active" : ""}`}>
-                      {r}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center justify-between pt-2 border-t border-border">
-              <span className="font-body text-xs text-muted-foreground">Найдено: <span className="text-gold">{filtered.length}</span> объектов</span>
-              <button onClick={() => { setSelectedType("Все"); setSelectedLocation("Все районы"); setSelectedPrice("Любая цена"); }}
-                className="font-body text-xs text-muted-foreground hover:text-foreground">Сбросить фильтры</button>
             </div>
           </div>
         </div>
 
-        {/* Мобиль: горизонтальные карточки */}
-        <div className="md:hidden space-y-3">
-          {filtered.map((p, i) => <PropertyCard key={p.id} property={p} delay={i * 60} horizontal />)}
+        {/* Мобиль: список */}
+        <div className="md:hidden space-y-2">
+          {filtered.map((p, i) => <PropertyCardH key={p.id} p={p} delay={i * 40} />)}
         </div>
-        {/* Десктоп: сетка */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((p, i) => <PropertyCard key={p.id} property={p} delay={i * 80} />)}
+        {/* Десктоп: 4 колонки */}
+        <div className="hidden md:grid grid-cols-4 gap-4">
+          {filtered.map((p, i) => <PropertyCardV key={p.id} p={p} delay={i * 50} />)}
         </div>
       </div>
     </div>
@@ -477,69 +403,54 @@ function CatalogPage() {
 /* ─── ABOUT ─── */
 function AboutPage() {
   return (
-    <div className="pt-14 md:pt-24 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-12">
-        <div className="relative overflow-hidden mb-10 md:mb-20">
-          <img src={VILLA_IMAGE} alt="О компании" className="w-full h-48 md:h-72 object-cover" />
+    <div className="pt-12 md:pt-16 min-h-screen">
+      <div className="max-w-7xl mx-auto px-3 md:px-6 py-6 md:py-10">
+        <div className="relative overflow-hidden mb-8">
+          <img src={VILLA_IMAGE} alt="О компании" className="w-full h-40 md:h-56 object-cover" />
           <div className="hero-overlay absolute inset-0" />
-          <div className="absolute bottom-0 left-0 p-5 md:p-10">
-            <p className="font-body text-[10px] tracking-[0.25em] uppercase text-gold mb-1">О нас</p>
-            <h1 className="font-display text-4xl md:text-6xl font-light text-foreground">КВАДРАТ</h1>
+          <div className="absolute bottom-0 left-0 p-5">
+            <p className="font-body text-[9px] tracking-[0.25em] uppercase text-gold mb-1">О нас</p>
+            <h1 className="font-display text-3xl md:text-5xl font-light text-foreground">КВАДРАТ</h1>
           </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-10 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 mb-8">
           <div>
-            <h2 className="font-display text-3xl md:text-4xl font-light gold-line pb-3 mb-5">Наша история</h2>
-            <p className="font-body text-sm text-foreground/70 leading-relaxed mb-4">
-              С 2004 года компания КВАДРАТ является одним из ведущих операторов рынка элитной недвижимости Москвы и Подмосковья.
-            </p>
-            <p className="font-body text-sm text-foreground/70 leading-relaxed">
-              За 20 лет работы мы провели более 1 200 сделок. Наша репутация строится на доверии клиентов, прозрачности и результате.
-            </p>
+            <h2 className="font-display text-2xl md:text-3xl font-light gold-line pb-3 mb-4">Наша история</h2>
+            <p className="font-body text-sm text-foreground/70 leading-relaxed mb-3">С 2004 года КВАДРАТ — ведущий оператор рынка элитной недвижимости Москвы и Подмосковья.</p>
+            <p className="font-body text-sm text-foreground/70 leading-relaxed">За 20 лет — более 1 200 сделок. Наша репутация строится на доверии и результате.</p>
           </div>
-          <div>
-            <h2 className="font-display text-3xl md:text-4xl font-light gold-line pb-3 mb-5">Ценности</h2>
-            <div className="space-y-3">
-              {[
-                { icon: "Shield", title: "Надёжность", desc: "Каждая сделка защищена юридически" },
-                { icon: "Eye", title: "Прозрачность", desc: "Открытость на каждом этапе" },
-                { icon: "Star", title: "Качество", desc: "Только проверенные объекты" },
-              ].map((v) => (
-                <div key={v.title} className="flex gap-3 p-4 bg-card border border-border">
-                  <div className="w-9 h-9 bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name={v.icon as "Shield"} size={16} className="text-gold" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-medium mb-0.5">{v.title}</h3>
-                    <p className="font-body text-xs text-muted-foreground">{v.desc}</p>
-                  </div>
+          <div className="space-y-3">
+            {[
+              { icon: "Shield", title: "Надёжность", desc: "Каждая сделка защищена юридически" },
+              { icon: "Eye", title: "Прозрачность", desc: "Открытость на каждом этапе" },
+              { icon: "Star", title: "Качество", desc: "Только проверенные объекты" },
+            ].map((v) => (
+              <div key={v.title} className="flex gap-3 p-3 bg-card border border-border">
+                <div className="w-8 h-8 bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name={v.icon as "Shield"} size={15} className="text-gold" />
                 </div>
-              ))}
-            </div>
+                <div>
+                  <h3 className="font-display text-base font-medium">{v.title}</h3>
+                  <p className="font-body text-xs text-muted-foreground">{v.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border mb-10 md:mb-20">
-          {[{ value: "20+", label: "Лет на рынке" }, { value: "1 200+", label: "Сделок" }, { value: "48", label: "Агентов" }, { value: "98%", label: "Рекомендуют" }].map((s) => (
-            <div key={s.label} className="bg-card p-5 md:p-8 text-center">
-              <div className="font-display text-3xl md:text-5xl font-light text-gold mb-1">{s.value}</div>
-              <div className="font-body text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">{s.label}</div>
+        <div className="grid grid-cols-4 gap-px bg-border mb-8">
+          {[{ value: "20+", label: "Лет" }, { value: "1 200+", label: "Сделок" }, { value: "48", label: "Агентов" }, { value: "98%", label: "Рекомендуют" }].map((s) => (
+            <div key={s.label} className="bg-card p-4 md:p-6 text-center">
+              <div className="font-display text-2xl md:text-4xl font-light text-gold mb-1">{s.value}</div>
+              <div className="font-body text-[9px] uppercase tracking-widest text-muted-foreground">{s.label}</div>
             </div>
           ))}
         </div>
-
-        <div>
-          <p className="font-body text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Команда</p>
-          <h2 className="font-display text-3xl md:text-4xl font-light mb-6">Наши эксперты</h2>
-          <div className="md:hidden flex gap-4 overflow-x-auto scrollbar-thin pb-2 -mx-4 px-4">
-            {agents.map((a) => (
-              <div key={a.id} className="flex-shrink-0 w-72"><AgentCard agent={a} /></div>
-            ))}
-          </div>
-          <div className="hidden md:grid grid-cols-3 gap-6">
-            {agents.map((a) => <AgentCard key={a.id} agent={a} />)}
-          </div>
+        <h2 className="font-display text-2xl md:text-3xl font-light mb-4">Команда агентов</h2>
+        <div className="md:hidden flex gap-3 overflow-x-auto scrollbar-thin pb-1 -mx-3 px-3">
+          {agents.map((a) => <div key={a.id} className="flex-shrink-0 w-64"><AgentCard agent={a} /></div>)}
+        </div>
+        <div className="hidden md:grid grid-cols-3 gap-4">
+          {agents.map((a) => <AgentCard key={a.id} agent={a} />)}
         </div>
       </div>
     </div>
@@ -549,72 +460,62 @@ function AboutPage() {
 /* ─── CONTACTS ─── */
 function ContactsPage() {
   const [formSent, setFormSent] = useState(false);
-
   return (
-    <div className="pt-14 md:pt-24 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-12">
-        <p className="font-body text-[10px] tracking-[0.25em] uppercase text-gold mb-2">Связь</p>
-        <h1 className="font-display text-4xl md:text-5xl font-light mb-8">Контакты</h1>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          <div className="bg-card border border-border p-5 md:p-8">
-            <h2 className="font-display text-2xl md:text-3xl font-light mb-6">Оставить заявку</h2>
+    <div className="pt-12 md:pt-16 min-h-screen">
+      <div className="max-w-7xl mx-auto px-3 md:px-6 py-5 md:py-10">
+        <h1 className="font-display text-3xl md:text-4xl font-light mb-5">Контакты</h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div className="bg-card border border-border p-5">
+            <h2 className="font-display text-2xl font-light mb-5">Оставить заявку</h2>
             {formSent ? (
-              <div className="text-center py-10">
-                <div className="w-14 h-14 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Check" size={24} className="text-gold" />
+              <div className="text-center py-8">
+                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Icon name="Check" size={22} className="text-gold" />
                 </div>
-                <h3 className="font-display text-2xl mb-1">Заявка отправлена</h3>
-                <p className="font-body text-sm text-muted-foreground">Свяжемся с вами в течение 30 минут</p>
+                <h3 className="font-display text-xl mb-1">Заявка отправлена</h3>
+                <p className="font-body text-sm text-muted-foreground">Свяжемся в течение 30 минут</p>
               </div>
             ) : (
-              <div className="space-y-4">
-                {[
-                  { label: "Ваше имя", placeholder: "Имя и фамилия" },
-                  { label: "Телефон", placeholder: "+7 (___) ___-__-__" },
-                  { label: "Email", placeholder: "your@email.com" },
-                ].map((f) => (
+              <div className="space-y-3">
+                {[{ label: "Имя", ph: "Имя и фамилия" }, { label: "Телефон", ph: "+7 (___) ___-__-__" }, { label: "Email", ph: "your@email.com" }].map((f) => (
                   <div key={f.label}>
-                    <label className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-1.5 block">{f.label}</label>
-                    <input className="w-full bg-background border border-border px-4 py-3 font-body text-sm focus:outline-none focus:border-gold/60 transition-colors" placeholder={f.placeholder} />
+                    <label className="font-body text-[9px] uppercase tracking-widest text-muted-foreground mb-1 block">{f.label}</label>
+                    <input className="w-full bg-background border border-border px-3 py-2.5 font-body text-sm focus:outline-none focus:border-gold/60 transition-colors" placeholder={f.ph} />
                   </div>
                 ))}
                 <div>
-                  <label className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-1.5 block">Сообщение</label>
-                  <textarea className="w-full bg-background border border-border px-4 py-3 font-body text-sm focus:outline-none focus:border-gold/60 transition-colors resize-none h-24" placeholder="Расскажите о пожеланиях..." />
+                  <label className="font-body text-[9px] uppercase tracking-widest text-muted-foreground mb-1 block">Сообщение</label>
+                  <textarea className="w-full bg-background border border-border px-3 py-2.5 font-body text-sm focus:outline-none focus:border-gold/60 transition-colors resize-none h-20" placeholder="Пожелания..." />
                 </div>
                 <button onClick={() => setFormSent(true)}
-                  className="w-full bg-gold text-primary-foreground font-body text-xs tracking-widest uppercase py-4 hover:bg-gold-light transition-colors duration-300">
+                  className="w-full bg-gold text-primary-foreground font-body text-xs tracking-widest uppercase py-3 hover:bg-gold-light transition-colors">
                   Отправить заявку
                 </button>
               </div>
             )}
           </div>
-
-          <div className="space-y-4">
+          <div className="space-y-3">
             {[
-              { icon: "Phone", title: "Телефон", lines: ["+7 (495) 123-45-67", "+7 (800) 555-00-11"] },
-              { icon: "Mail", title: "Email", lines: ["info@kvadrat-estate.ru"] },
-              { icon: "MapPin", title: "Адрес", lines: ["Москва, Пресненская наб., 10", "Башня «Федерация», 38 этаж"] },
-              { icon: "Clock", title: "Режим работы", lines: ["Пн–Пт: 9:00–20:00", "Сб–Вс: 10:00–18:00"] },
+              { icon: "Phone",   title: "Телефон",        lines: ["+7 (495) 123-45-67", "+7 (800) 555-00-11"] },
+              { icon: "Mail",    title: "Email",           lines: ["info@kvadrat-estate.ru"] },
+              { icon: "MapPin",  title: "Адрес",           lines: ["Москва, Пресненская наб., 10", "Башня «Федерация», 38 этаж"] },
+              { icon: "Clock",   title: "Режим работы",    lines: ["Пн–Пт: 9:00–20:00", "Сб–Вс: 10:00–18:00"] },
             ].map((c) => (
-              <div key={c.title} className="flex gap-4 p-4 bg-card border border-border">
-                <div className="w-10 h-10 bg-gold/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name={c.icon as "Phone"} size={18} className="text-gold" />
+              <div key={c.title} className="flex gap-3 p-4 bg-card border border-border">
+                <div className="w-9 h-9 bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name={c.icon as "Phone"} size={16} className="text-gold" />
                 </div>
                 <div>
-                  <p className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-1">{c.title}</p>
-                  {c.lines.map((line) => <p key={line} className="font-display text-lg">{line}</p>)}
+                  <p className="font-body text-[9px] uppercase tracking-widest text-muted-foreground mb-1">{c.title}</p>
+                  {c.lines.map((line) => <p key={line} className="font-display text-base">{line}</p>)}
                 </div>
               </div>
             ))}
             <div className="p-4 bg-card border border-gold/30">
-              <p className="font-body text-[10px] uppercase tracking-widest text-gold mb-3">Мессенджеры</p>
+              <p className="font-body text-[9px] uppercase tracking-widest text-gold mb-2">Мессенджеры</p>
               <div className="grid grid-cols-3 gap-2">
                 {["Telegram", "WhatsApp", "Viber"].map((m) => (
-                  <button key={m} className="border border-border font-body text-xs py-3 hover:border-gold/40 hover:text-gold transition-colors tracking-wider">
-                    {m}
-                  </button>
+                  <button key={m} className="border border-border font-body text-xs py-2.5 hover:border-gold/40 hover:text-gold transition-colors">{m}</button>
                 ))}
               </div>
             </div>
@@ -627,35 +528,27 @@ function ContactsPage() {
 
 /* ─── ACCOUNT ─── */
 const accountListings = [
-  { id: 1, title: "3-комн. апартаменты, Арбат", status: "Активно", price: "75 000 000 ₽", date: "12.03.2026", views: 142 },
-  { id: 2, title: "Пентхаус, Тверская", status: "На модерации", price: "210 000 000 ₽", date: "05.04.2026", views: 67 },
-  { id: 3, title: "Таунхаус, Рублёвка", status: "Завершено", price: "185 000 000 ₽", date: "10.01.2026", views: 389 },
+  { id: 1, title: "3-комн. апартаменты, Арбат",  status: "Активно",       price: "75 000 000 ₽",  date: "12.03.2026", views: 142 },
+  { id: 2, title: "Пентхаус, Тверская",           status: "На модерации",  price: "210 000 000 ₽", date: "05.04.2026", views: 67  },
+  { id: 3, title: "Таунхаус, Рублёвка",           status: "Завершено",     price: "185 000 000 ₽", date: "10.01.2026", views: 389 },
 ];
 
 function AccountPage() {
   const [tab, setTab] = useState<"listings" | "favorites" | "settings">("listings");
   return (
-    <div className="pt-14 md:pt-24 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-12">
-        {/* Профиль */}
-        <div className="flex items-center gap-4 mb-8 p-4 bg-card border border-border md:bg-transparent md:border-0 md:p-0">
-          <div className="w-16 h-16 bg-gold/20 border border-gold/40 rounded-full flex items-center justify-center font-display text-2xl text-gold flex-shrink-0">
-            МК
-          </div>
+    <div className="pt-12 md:pt-16 min-h-screen">
+      <div className="max-w-7xl mx-auto px-3 md:px-6 py-4 md:py-8">
+        <div className="flex items-center gap-3 mb-5 p-4 bg-card border border-border md:bg-transparent md:border-0 md:p-0">
+          <div className="w-14 h-14 bg-gold/20 border border-gold/40 rounded-full flex items-center justify-center font-display text-xl text-gold flex-shrink-0">МК</div>
           <div>
-            <h1 className="font-display text-2xl md:text-4xl font-light">Михаил Кузнецов</h1>
-            <p className="font-body text-[10px] text-muted-foreground uppercase tracking-widest mt-0.5">Клиент с 2022 года</p>
-            <p className="font-body text-xs text-foreground/60 mt-0.5">m.kuznetsov@email.com</p>
+            <h1 className="font-display text-2xl md:text-3xl font-light">Михаил Кузнецов</h1>
+            <p className="font-body text-[9px] text-muted-foreground uppercase tracking-widest">Клиент с 2022 · m.kuznetsov@email.com</p>
           </div>
         </div>
-
-        {/* Tabs */}
-        <div className="flex border-b border-border mb-6 overflow-x-auto">
+        <div className="flex border-b border-border mb-5 overflow-x-auto">
           {[{ key: "listings", label: "Объявления" }, { key: "favorites", label: "Избранное" }, { key: "settings", label: "Настройки" }].map((t) => (
             <button key={t.key} onClick={() => setTab(t.key as typeof tab)}
-              className={`flex-shrink-0 font-body text-xs tracking-widest uppercase px-4 md:px-6 py-4 border-b-2 transition-colors ${
-                tab === t.key ? "border-gold text-gold" : "border-transparent text-muted-foreground hover:text-foreground"
-              }`}>
+              className={`flex-shrink-0 font-body text-xs tracking-widest uppercase px-4 py-3 border-b-2 transition-colors ${tab === t.key ? "border-gold text-gold" : "border-transparent text-muted-foreground"}`}>
               {t.label}
             </button>
           ))}
@@ -663,32 +556,29 @@ function AccountPage() {
 
         {tab === "listings" && (
           <div>
-            <div className="flex items-center justify-between mb-4">
-              <p className="font-body text-sm text-muted-foreground">Всего: {accountListings.length}</p>
-              <button className="bg-gold text-primary-foreground font-body text-xs tracking-widest uppercase px-4 py-2.5 hover:bg-gold-light transition-colors">
-                + Добавить
-              </button>
+            <div className="flex items-center justify-between mb-3">
+              <p className="font-body text-xs text-muted-foreground">Всего: {accountListings.length}</p>
+              <button className="bg-gold text-primary-foreground font-body text-[10px] tracking-widest uppercase px-4 py-2 hover:bg-gold-light transition-colors">+ Добавить</button>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {accountListings.map((l) => (
                 <div key={l.id} className="luxury-card p-4">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1 min-w-0">
                       <h3 className="font-display text-lg font-medium truncate">{l.title}</h3>
-                      <div className="flex items-center gap-3 font-body text-xs text-muted-foreground mt-1">
+                      <div className="flex items-center gap-3 font-body text-[10px] text-muted-foreground mt-0.5">
                         <span>{l.date}</span>
-                        <span className="flex items-center gap-1"><Icon name="Eye" size={11} />{l.views}</span>
+                        <span className="flex items-center gap-1"><Icon name="Eye" size={10} />{l.views}</span>
                       </div>
                     </div>
-                    <span className={`flex-shrink-0 font-body text-[10px] tracking-wider uppercase px-2.5 py-1 ${
+                    <span className={`flex-shrink-0 font-body text-[9px] tracking-wider uppercase px-2 py-0.5 ${
                       l.status === "Активно" ? "bg-green-900/30 text-green-400 border border-green-800"
-                        : l.status === "На модерации" ? "bg-yellow-900/30 text-yellow-400 border border-yellow-800"
-                        : "bg-muted text-muted-foreground border border-border"
-                    }`}>{l.status}</span>
+                      : l.status === "На модерации" ? "bg-yellow-900/30 text-yellow-400 border border-yellow-800"
+                      : "bg-muted text-muted-foreground border border-border"}`}>{l.status}</span>
                   </div>
-                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-border">
+                  <div className="flex items-center justify-between mt-2.5 pt-2.5 border-t border-border">
                     <span className="font-display text-lg text-gold">{l.price}</span>
-                    <button className="text-muted-foreground"><Icon name="MoreHorizontal" size={16} /></button>
+                    <button className="text-muted-foreground"><Icon name="MoreHorizontal" size={15} /></button>
                   </div>
                 </div>
               ))}
@@ -697,28 +587,26 @@ function AccountPage() {
         )}
 
         {tab === "favorites" && (
-          <div className="space-y-3 md:hidden">
-            {properties.slice(0, 3).map((p, i) => <PropertyCard key={p.id} property={p} delay={i * 60} horizontal />)}
-          </div>
-        )}
-        {tab === "favorites" && (
-          <div className="hidden md:grid grid-cols-3 gap-6">
-            {properties.slice(0, 3).map((p, i) => <PropertyCard key={p.id} property={p} delay={i * 80} />)}
-          </div>
+          <>
+            <div className="md:hidden space-y-2">
+              {properties.slice(0, 4).map((p, i) => <PropertyCardH key={p.id} p={p} delay={i * 50} />)}
+            </div>
+            <div className="hidden md:grid grid-cols-4 gap-4">
+              {properties.slice(0, 4).map((p, i) => <PropertyCardV key={p.id} p={p} delay={i * 60} />)}
+            </div>
+          </>
         )}
 
         {tab === "settings" && (
-          <div className="max-w-lg bg-card border border-border p-5 md:p-8 space-y-4">
-            <h2 className="font-display text-2xl font-light mb-4">Личные данные</h2>
+          <div className="max-w-sm bg-card border border-border p-5 space-y-4">
+            <h2 className="font-display text-xl font-light">Личные данные</h2>
             {[{ label: "Имя", value: "Михаил Кузнецов" }, { label: "Телефон", value: "+7 (999) 123-45-67" }, { label: "Email", value: "m.kuznetsov@email.com" }].map((f) => (
               <div key={f.label}>
-                <label className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-1.5 block">{f.label}</label>
-                <input defaultValue={f.value} className="w-full bg-background border border-border px-4 py-3 font-body text-sm focus:outline-none focus:border-gold/60 transition-colors" />
+                <label className="font-body text-[9px] uppercase tracking-widest text-muted-foreground mb-1 block">{f.label}</label>
+                <input defaultValue={f.value} className="w-full bg-background border border-border px-3 py-2.5 font-body text-sm focus:outline-none focus:border-gold/60 transition-colors" />
               </div>
             ))}
-            <button className="w-full md:w-auto bg-gold text-primary-foreground font-body text-xs tracking-widest uppercase px-8 py-3 hover:bg-gold-light transition-colors">
-              Сохранить
-            </button>
+            <button className="w-full bg-gold text-primary-foreground font-body text-xs tracking-widest uppercase py-2.5 hover:bg-gold-light transition-colors">Сохранить</button>
           </div>
         )}
       </div>
@@ -726,21 +614,19 @@ function AccountPage() {
   );
 }
 
-/* ─── FOOTER (только десктоп) ─── */
+/* ─── FOOTER (desktop only) ─── */
 function Footer({ onNav }: { onNav: (p: Page) => void }) {
   return (
-    <footer className="border-t border-border bg-card mb-0 md:mb-0 hidden md:block">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-4 gap-8 mb-10">
+    <footer className="hidden md:block border-t border-border bg-card">
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="grid grid-cols-4 gap-6 mb-6">
           <div className="col-span-2">
-            <div className="font-display text-3xl text-gold mb-3">КВАДРАТ</div>
-            <p className="font-body text-xs text-muted-foreground leading-relaxed max-w-sm">
-              Портал элитной недвижимости Москвы и Подмосковья. Более 20 лет на рынке.
-            </p>
+            <div className="font-display text-2xl text-gold mb-2">КВАДРАТ</div>
+            <p className="font-body text-xs text-muted-foreground leading-relaxed">Портал элитной недвижимости Москвы и Подмосковья. 20+ лет на рынке.</p>
           </div>
           <div>
-            <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-4">Навигация</p>
-            <div className="space-y-2">
+            <p className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-3">Навигация</p>
+            <div className="space-y-1.5">
               {(["home", "catalog", "about", "contacts"] as Page[]).map((p) => (
                 <button key={p} onClick={() => onNav(p)} className="block font-body text-sm text-foreground/60 hover:text-gold transition-colors">
                   {p === "home" ? "Главная" : p === "catalog" ? "Каталог" : p === "about" ? "О компании" : "Контакты"}
@@ -749,16 +635,16 @@ function Footer({ onNav }: { onNav: (p: Page) => void }) {
             </div>
           </div>
           <div>
-            <p className="font-body text-xs uppercase tracking-widest text-muted-foreground mb-4">Контакты</p>
-            <div className="space-y-2 font-body text-sm text-foreground/60">
+            <p className="font-body text-[10px] uppercase tracking-widest text-muted-foreground mb-3">Контакты</p>
+            <div className="space-y-1.5 font-body text-sm text-foreground/60">
               <p>+7 (495) 123-45-67</p>
               <p>info@kvadrat-estate.ru</p>
               <p>Пресненская наб., 10</p>
             </div>
           </div>
         </div>
-        <div className="border-t border-border pt-6 flex items-center justify-between">
-          <p className="font-body text-xs text-muted-foreground">© 2026 КВАДРАТ. Все права защищены.</p>
+        <div className="border-t border-border pt-4 flex items-center justify-between">
+          <p className="font-body text-xs text-muted-foreground">© 2026 КВАДРАТ</p>
           <p className="font-body text-xs text-muted-foreground">Лицензия ЦБ РФ №123456</p>
         </div>
       </div>
@@ -769,31 +655,19 @@ function Footer({ onNav }: { onNav: (p: Page) => void }) {
 /* ─── ROOT ─── */
 export default function Index() {
   const [page, setPage] = useState<Page>("home");
-
-  const navigate = (p: Page) => {
-    setPage(p);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
+  const navigate = (p: Page) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); };
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Десктоп навигация сверху */}
       <Navbar current={page} onNav={navigate} />
-      {/* Мобильный хедер сверху */}
       <MobileTopBar current={page} onNav={navigate} />
-
-      {/* Контент + отступ под мобильный нижний бар */}
-      <div className="pb-16 md:pb-0">
-        {page === "home" && <HomePage onNav={navigate} />}
-        {page === "catalog" && <CatalogPage />}
-        {page === "about" && <AboutPage />}
+      <div className="pb-14 md:pb-0">
+        {page === "home"     && <HomePage onNav={navigate} />}
+        {page === "catalog"  && <CatalogPage />}
+        {page === "about"    && <AboutPage />}
         {page === "contacts" && <ContactsPage />}
-        {page === "account" && <AccountPage />}
+        {page === "account"  && <AccountPage />}
       </div>
-
       <Footer onNav={navigate} />
-
-      {/* Мобильная нижняя навигация */}
       <MobileBottomNav current={page} onNav={navigate} />
     </div>
   );
