@@ -1,22 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
+
+const LOGO = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/bucket/20d35dd4-1e7d-49f5-b32f-c12477872400.png";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/files/34ef97d2-003c-4dbb-a904-ed70b22a4e08.jpg";
 const VILLA_IMAGE = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/files/ce267202-09f2-478f-b90a-5813d32c1c4f.jpg";
 
 const properties = [
-  { id: 1,  title: "Пентхаус «Северная Звезда»",   location: "Пресненская набережная",        price: "185 000 000 ₽", type: "Пентхаус",    area: "320 м²",  rooms: 5,  floor: "42 эт.", image: HERO_IMAGE,  tag: "Эксклюзив" },
-  { id: 2,  title: "Вилла «Серебряный Бор»",        location: "Рублёво-Успенское ш.",          price: "420 000 000 ₽", type: "Вилла",        area: "780 м²",  rooms: 8,  floor: "2 эт.",  image: VILLA_IMAGE, tag: "Новинка"   },
-  { id: 3,  title: "Апартаменты «Патриарши»",       location: "Патриаршие пруды",              price: "95 000 000 ₽",  type: "Апартаменты", area: "180 м²",  rooms: 3,  floor: "7 эт.",  image: HERO_IMAGE,  tag: null        },
-  { id: 4,  title: "Таунхаус «Дубровка»",           location: "Рублёвское ш., Москва",         price: "260 000 000 ₽", type: "Таунхаус",    area: "450 м²",  rooms: 6,  floor: "3 эт.",  image: VILLA_IMAGE, tag: null        },
-  { id: 5,  title: "Пентхаус «Алые Паруса»",        location: "Хорошёвское ш., Москва",        price: "145 000 000 ₽", type: "Пентхаус",    area: "240 м²",  rooms: 4,  floor: "34 эт.", image: HERO_IMAGE,  tag: "Горячее"  },
-  { id: 6,  title: "Усадьба «Николина Гора»",        location: "Николина Гора, Подмосковье",    price: "580 000 000 ₽", type: "Усадьба",     area: "1200 м²", rooms: 12, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Эксклюзив" },
-  { id: 7,  title: "Апартаменты «Арбат»",           location: "Арбат, Москва",                 price: "78 000 000 ₽",  type: "Апартаменты", area: "145 м²",  rooms: 3,  floor: "5 эт.",  image: VILLA_IMAGE, tag: null        },
-  { id: 8,  title: "Вилла «Сосновый Бор»",          location: "Новорижское ш., Подмосковье",   price: "310 000 000 ₽", type: "Вилла",        area: "620 м²",  rooms: 7,  floor: "2 эт.",  image: HERO_IMAGE,  tag: "Новинка"  },
-  { id: 9,  title: "Таунхаус «Куркино»",            location: "Куркино, Москва",               price: "88 000 000 ₽",  type: "Таунхаус",    area: "280 м²",  rooms: 4,  floor: "2 эт.",  image: VILLA_IMAGE, tag: null        },
-  { id: 10, title: "Пентхаус «Москва-Сити»",        location: "Пресня Сити, Москва",           price: "320 000 000 ₽", type: "Пентхаус",    area: "410 м²",  rooms: 6,  floor: "55 эт.", image: HERO_IMAGE,  tag: "Эксклюзив" },
-  { id: 11, title: "Апартаменты «Замоскворечье»",   location: "Замоскворечье, Москва",         price: "62 000 000 ₽",  type: "Апартаменты", area: "120 м²",  rooms: 2,  floor: "4 эт.",  image: HERO_IMAGE,  tag: null        },
-  { id: 12, title: "Усадьба «Барвиха»",             location: "Барвиха, Подмосковье",          price: "890 000 000 ₽", type: "Усадьба",     area: "1800 м²", rooms: 14, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Горячее"  },
+  { id: 1,  title: "Пентхаус «Северная Звезда»",  location: "Пресненская набережная",       price: "185 000 000 ₽", type: "Пентхаус",    area: "320 м²",  rooms: 5,  floor: "42 эт.", image: HERO_IMAGE,  tag: "Эксклюзив", lat: 55.7494, lng: 37.5398 },
+  { id: 2,  title: "Вилла «Серебряный Бор»",       location: "Рублёво-Успенское ш.",         price: "420 000 000 ₽", type: "Вилла",        area: "780 м²",  rooms: 8,  floor: "2 эт.",  image: VILLA_IMAGE, tag: "Новинка",   lat: 55.7800, lng: 37.3200 },
+  { id: 3,  title: "Апартаменты «Патриарши»",      location: "Патриаршие пруды",             price: "95 000 000 ₽",  type: "Апартаменты", area: "180 м²",  rooms: 3,  floor: "7 эт.",  image: HERO_IMAGE,  tag: null,        lat: 55.7640, lng: 37.5935 },
+  { id: 4,  title: "Таунхаус «Дубровка»",          location: "Рублёвское ш., Москва",        price: "260 000 000 ₽", type: "Таунхаус",    area: "450 м²",  rooms: 6,  floor: "3 эт.",  image: VILLA_IMAGE, tag: null,        lat: 55.7450, lng: 37.3800 },
+  { id: 5,  title: "Пентхаус «Алые Паруса»",       location: "Хорошёвское ш., Москва",       price: "145 000 000 ₽", type: "Пентхаус",    area: "240 м²",  rooms: 4,  floor: "34 эт.", image: HERO_IMAGE,  tag: "Горячее",   lat: 55.7850, lng: 37.4900 },
+  { id: 6,  title: "Усадьба «Николина Гора»",       location: "Николина Гора, Подмосковье",   price: "580 000 000 ₽", type: "Усадьба",     area: "1200 м²", rooms: 12, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Эксклюзив", lat: 55.7200, lng: 37.1500 },
+  { id: 7,  title: "Апартаменты «Арбат»",          location: "Арбат, Москва",                price: "78 000 000 ₽",  type: "Апартаменты", area: "145 м²",  rooms: 3,  floor: "5 эт.",  image: VILLA_IMAGE, tag: null,        lat: 55.7520, lng: 37.5900 },
+  { id: 8,  title: "Вилла «Сосновый Бор»",         location: "Новорижское ш., Подмосковье",  price: "310 000 000 ₽", type: "Вилла",        area: "620 м²",  rooms: 7,  floor: "2 эт.",  image: HERO_IMAGE,  tag: "Новинка",   lat: 55.8100, lng: 37.2300 },
+  { id: 9,  title: "Таунхаус «Куркино»",           location: "Куркино, Москва",              price: "88 000 000 ₽",  type: "Таунхаус",    area: "280 м²",  rooms: 4,  floor: "2 эт.",  image: VILLA_IMAGE, tag: null,        lat: 55.8700, lng: 37.3700 },
+  { id: 10, title: "Пентхаус «Москва-Сити»",       location: "Пресня Сити, Москва",          price: "320 000 000 ₽", type: "Пентхаус",    area: "410 м²",  rooms: 6,  floor: "55 эт.", image: HERO_IMAGE,  tag: "Эксклюзив", lat: 55.7490, lng: 37.5360 },
+  { id: 11, title: "Апартаменты «Замоскворечье»",  location: "Замоскворечье, Москва",        price: "62 000 000 ₽",  type: "Апартаменты", area: "120 м²",  rooms: 2,  floor: "4 эт.",  image: HERO_IMAGE,  tag: null,        lat: 55.7370, lng: 37.6270 },
+  { id: 12, title: "Усадьба «Барвиха»",            location: "Барвиха, Подмосковье",         price: "890 000 000 ₽", type: "Усадьба",     area: "1800 м²", rooms: 14, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Горячее",   lat: 55.7600, lng: 37.2800 },
 ];
 
 const agents = [
@@ -41,6 +43,73 @@ function StarRating({ rating, max = 5 }: { rating: number; max?: number }) {
   );
 }
 
+/* ─── MAP COMPONENT (Leaflet / OpenStreetMap) ─── */
+function PropertyMap({ items }: { items: typeof properties }) {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<unknown>(null);
+
+  useEffect(() => {
+    if (!mapRef.current || mapInstanceRef.current) return;
+
+    import("leaflet").then((L) => {
+      if (!mapRef.current || mapInstanceRef.current) return;
+
+      // Leaflet CSS
+      if (!document.getElementById("leaflet-css")) {
+        const link = document.createElement("link");
+        link.id = "leaflet-css";
+        link.rel = "stylesheet";
+        link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        document.head.appendChild(link);
+      }
+
+      const map = L.map(mapRef.current, { zoomControl: true, scrollWheelZoom: false }).setView([55.762, 37.48], 10);
+      mapInstanceRef.current = map;
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap",
+        maxZoom: 18,
+      }).addTo(map);
+
+      const goldIcon = L.divIcon({
+        className: "",
+        html: `<div style="
+          background:#C9A84C;color:#1a1008;font-family:'Montserrat',sans-serif;
+          font-size:10px;font-weight:700;padding:4px 7px;white-space:nowrap;
+          box-shadow:0 2px 8px rgba(0,0,0,0.5);letter-spacing:0.05em;cursor:pointer;
+          border-radius:2px;
+        ">₽</div>`,
+        iconAnchor: [16, 16],
+      });
+
+      items.forEach((p) => {
+        const marker = L.marker([p.lat, p.lng], { icon: goldIcon }).addTo(map);
+        marker.bindPopup(`
+          <div style="font-family:'Montserrat',sans-serif;min-width:180px">
+            <img src="${p.image}" style="width:100%;height:90px;object-fit:cover;display:block;margin-bottom:8px"/>
+            <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.1em">${p.type}</div>
+            <div style="font-size:13px;font-weight:600;margin:2px 0 4px">${p.title}</div>
+            <div style="font-size:11px;color:#666;margin-bottom:6px">${p.location}</div>
+            <div style="font-size:13px;font-weight:700;color:#C9A84C">${p.price}</div>
+            <div style="font-size:10px;color:#999;margin-top:3px">${p.area} · ${p.rooms} комн. · ${p.floor}</div>
+          </div>
+        `, { maxWidth: 220 });
+      });
+    });
+
+    return () => {
+      if (mapInstanceRef.current) {
+        (mapInstanceRef.current as { remove: () => void }).remove();
+        mapInstanceRef.current = null;
+      }
+    };
+  }, [items]);
+
+  return (
+    <div ref={mapRef} className="w-full h-full rounded-sm" style={{ minHeight: 320 }} />
+  );
+}
+
 /* ─── DESKTOP NAVBAR ─── */
 function Navbar({ current, onNav }: { current: Page; onNav: (p: Page) => void }) {
   const links: { label: string; page: Page }[] = [
@@ -52,7 +121,9 @@ function Navbar({ current, onNav }: { current: Page; onNav: (p: Page) => void })
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 nav-blur hidden md:block">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <button onClick={() => onNav("home")} className="font-display text-2xl font-light tracking-[0.15em] text-gold">КВАДРАТ</button>
+        <button onClick={() => onNav("home")} className="flex items-center">
+          <img src={LOGO} alt="КВАДРАТ" className="h-9 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
+        </button>
         <div className="flex items-center gap-8">
           {links.map((l) => (
             <button key={l.page} onClick={() => onNav(l.page)}
@@ -74,7 +145,9 @@ function Navbar({ current, onNav }: { current: Page; onNav: (p: Page) => void })
 function MobileTopBar({ current, onNav }: { current: Page; onNav: (p: Page) => void }) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 md:hidden nav-blur h-12 flex items-center px-4 justify-between">
-      <button onClick={() => onNav("home")} className="font-display text-lg font-light tracking-[0.15em] text-gold">КВАДРАТ</button>
+      <button onClick={() => onNav("home")} className="flex items-center">
+        <img src={LOGO} alt="КВАДРАТ" className="h-7 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
+      </button>
       <button onClick={() => onNav("catalog")}
         className="flex items-center gap-1.5 bg-gold/10 border border-gold/30 text-gold text-xs px-3 py-1.5 rounded-full">
         <Icon name="Search" size={13} />Поиск
@@ -278,6 +351,7 @@ function CatalogPage() {
   const [selectedLocation, setSelectedLocation] = useState("Все районы");
   const [selectedPrice, setSelectedPrice] = useState("Любая цена");
   const [showFilters, setShowFilters] = useState(false);
+  const [viewMode, setViewMode] = useState<"list" | "map">("list");
 
   const filtered = properties.filter((p) => selectedType === "Все" || p.type === selectedType);
 
@@ -362,14 +436,51 @@ function CatalogPage() {
           </div>
         </div>
 
-        {/* Мобиль: список */}
-        <div className="md:hidden space-y-2">
-          {filtered.map((p, i) => <PropertyCardH key={p.id} p={p} delay={i * 40} />)}
+        {/* Переключатель вид / карта */}
+        <div className="flex items-center justify-between mb-3">
+          <span className="font-body text-xs text-muted-foreground">
+            Найдено: <span className="text-gold font-medium">{filtered.length}</span>
+          </span>
+          <div className="flex border border-border overflow-hidden">
+            <button
+              onClick={() => setViewMode("list")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 font-body text-[10px] uppercase tracking-wider transition-colors ${viewMode === "list" ? "bg-gold text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+              <Icon name="LayoutList" size={13} />Список
+            </button>
+            <button
+              onClick={() => setViewMode("map")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 font-body text-[10px] uppercase tracking-wider transition-colors ${viewMode === "map" ? "bg-gold text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+              <Icon name="Map" size={13} />Карта
+            </button>
+          </div>
         </div>
-        {/* Десктоп: 4 колонки */}
-        <div className="hidden md:grid grid-cols-4 gap-4">
-          {filtered.map((p, i) => <PropertyCardV key={p.id} p={p} delay={i * 50} />)}
-        </div>
+
+        {/* Режим карты */}
+        {viewMode === "map" && (
+          <div className="flex flex-col md:flex-row gap-4">
+            {/* Карта */}
+            <div className="w-full md:w-3/5 border border-border overflow-hidden" style={{ height: 520 }}>
+              <PropertyMap items={filtered} />
+            </div>
+            {/* Список рядом с картой */}
+            <div className="w-full md:w-2/5 space-y-2 overflow-y-auto" style={{ maxHeight: 520 }}>
+              {filtered.map((p, i) => <PropertyCardH key={p.id} p={p} delay={i * 30} />)}
+            </div>
+          </div>
+        )}
+
+        {/* Режим списка — мобиль */}
+        {viewMode === "list" && (
+          <>
+            <div className="md:hidden space-y-2">
+              {filtered.map((p, i) => <PropertyCardH key={p.id} p={p} delay={i * 40} />)}
+            </div>
+            {/* Десктоп: 4 колонки */}
+            <div className="hidden md:grid grid-cols-4 gap-4">
+              {filtered.map((p, i) => <PropertyCardV key={p.id} p={p} delay={i * 50} />)}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -385,7 +496,7 @@ function AboutPage() {
           <div className="hero-overlay absolute inset-0" />
           <div className="absolute bottom-0 left-0 p-5">
             <p className="font-body text-[9px] tracking-[0.25em] uppercase text-gold mb-1">О нас</p>
-            <h1 className="font-display text-3xl md:text-5xl font-light text-foreground">КВАДРАТ</h1>
+            <img src={LOGO} alt="КВАДРАТ" className="h-10 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 mb-8">
@@ -596,7 +707,7 @@ function Footer({ onNav }: { onNav: (p: Page) => void }) {
       <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid grid-cols-4 gap-6 mb-6">
           <div className="col-span-2">
-            <div className="font-display text-2xl text-gold mb-2">КВАДРАТ</div>
+            <img src={LOGO} alt="КВАДРАТ" className="h-10 w-auto object-contain mb-2" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="font-body text-xs text-muted-foreground leading-relaxed">Портал элитной недвижимости Москвы и Подмосковья. 20+ лет на рынке.</p>
           </div>
           <div>
