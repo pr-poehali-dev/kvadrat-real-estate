@@ -6,7 +6,14 @@ const LOGO = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/files/34ef97d2-003c-4dbb-a904-ed70b22a4e08.jpg";
 const VILLA_IMAGE = "https://cdn.poehali.dev/projects/cfe57687-6d6f-462b-965a-8b5e88af9429/files/ce267202-09f2-478f-b90a-5813d32c1c4f.jpg";
 
-const properties = [
+type PropertyType = {
+  id: number; title: string; location: string; price: string;
+  type: string; area: string; rooms: number; floor: string;
+  image: string; tag: string | null; lat: number; lng: number;
+  purpose?: string;
+};
+
+const properties: PropertyType[] = [
   { id: 1,  title: "Пентхаус «Северная Звезда»",  location: "Пресненская набережная",       price: "185 000 000 ₽", type: "Пентхаус",    area: "320 м²",  rooms: 5,  floor: "42 эт.", image: HERO_IMAGE,  tag: "Эксклюзив", lat: 55.7494, lng: 37.5398 },
   { id: 2,  title: "Вилла «Серебряный Бор»",       location: "Рублёво-Успенское ш.",         price: "420 000 000 ₽", type: "Вилла",        area: "780 м²",  rooms: 8,  floor: "2 эт.",  image: VILLA_IMAGE, tag: "Новинка",   lat: 55.7800, lng: 37.3200 },
   { id: 3,  title: "Апартаменты «Патриарши»",      location: "Патриаршие пруды",             price: "95 000 000 ₽",  type: "Апартаменты", area: "180 м²",  rooms: 3,  floor: "7 эт.",  image: HERO_IMAGE,  tag: null,        lat: 55.7640, lng: 37.5935 },
@@ -19,6 +26,24 @@ const properties = [
   { id: 10, title: "Пентхаус «Москва-Сити»",       location: "Пресня Сити, Москва",          price: "320 000 000 ₽", type: "Пентхаус",    area: "410 м²",  rooms: 6,  floor: "55 эт.", image: HERO_IMAGE,  tag: "Эксклюзив", lat: 55.7490, lng: 37.5360 },
   { id: 11, title: "Апартаменты «Замоскворечье»",  location: "Замоскворечье, Москва",        price: "62 000 000 ₽",  type: "Апартаменты", area: "120 м²",  rooms: 2,  floor: "4 эт.",  image: HERO_IMAGE,  tag: null,        lat: 55.7370, lng: 37.6270 },
   { id: 12, title: "Усадьба «Барвиха»",            location: "Барвиха, Подмосковье",         price: "890 000 000 ₽", type: "Усадьба",     area: "1800 м²", rooms: 14, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Горячее",   lat: 55.7600, lng: 37.2800 },
+
+  // ─── Земельные участки ───
+  { id: 13, title: "Участок «Рублёвские просторы»", location: "Рублёво-Успенское ш., 22 км", price: "85 000 000 ₽",  type: "Земельный участок", area: "35 сот.", rooms: 0, floor: "—",      image: VILLA_IMAGE, tag: "Эксклюзив", lat: 55.7650, lng: 37.2400, purpose: "ИЖС" },
+  { id: 14, title: "Участок «Новая Рига»",          location: "Новорижское ш., 30 км",        price: "42 000 000 ₽",  type: "Земельный участок", area: "20 сот.", rooms: 0, floor: "—",      image: HERO_IMAGE,  tag: "Новинка",   lat: 55.8200, lng: 37.1800, purpose: "ИЖС" },
+  { id: 15, title: "Участок под коммерцию, Химки",  location: "Ленинградское ш., Химки",      price: "120 000 000 ₽", type: "Земельный участок", area: "50 сот.", rooms: 0, floor: "—",      image: VILLA_IMAGE, tag: null,         lat: 55.8900, lng: 37.4300, purpose: "Коммерческое" },
+  { id: 16, title: "Участок «Истра»",               location: "Волоколамское ш., 42 км",      price: "18 000 000 ₽",  type: "Земельный участок", area: "15 сот.", rooms: 0, floor: "—",      image: HERO_IMAGE,  tag: null,         lat: 55.9100, lng: 36.8600, purpose: "СНТ / Дача" },
+
+  // ─── Коммерческая недвижимость ───
+  { id: 17, title: "Офисный блок «Москва-Сити»",    location: "Пресненская наб., башня Запад", price: "240 000 000 ₽", type: "Коммерческая", area: "480 м²",  rooms: 0, floor: "18 эт.", image: HERO_IMAGE,  tag: "Эксклюзив", lat: 55.7490, lng: 37.5370, purpose: "Офис" },
+  { id: 18, title: "Торговое помещение «Арбат»",    location: "ул. Арбат, Москва",             price: "75 000 000 ₽",  type: "Коммерческая", area: "210 м²",  rooms: 0, floor: "1 эт.",  image: VILLA_IMAGE, tag: "Горячее",   lat: 55.7510, lng: 37.5880, purpose: "Торговля" },
+  { id: 19, title: "Склад-офис «Новорижский»",      location: "Новорижское ш., Красногорск",   price: "95 000 000 ₽",  type: "Коммерческая", area: "1 200 м²",rooms: 0, floor: "1 эт.",  image: HERO_IMAGE,  tag: null,         lat: 55.8300, lng: 37.3600, purpose: "Склад / Производство" },
+  { id: 20, title: "Гостиница «Серебряный Бор»",    location: "Серебряный Бор, Москва",        price: "380 000 000 ₽", type: "Коммерческая", area: "2 400 м²",rooms: 0, floor: "4 эт.",  image: VILLA_IMAGE, tag: "Новинка",   lat: 55.7900, lng: 37.4100, purpose: "Гостиница / Отель" },
+
+  // ─── Частные дома с земельным участком ───
+  { id: 21, title: "Дом «Рублёвка Классик»",        location: "Рублёво-Успенское ш., 8 км",   price: "185 000 000 ₽", type: "Частный дом",  area: "380 м²",  rooms: 6, floor: "2 эт.",  image: VILLA_IMAGE, tag: "Эксклюзив", lat: 55.7720, lng: 37.2900, purpose: "Участок 18 сот." },
+  { id: 22, title: "Дом «Лесной Уют», Одинцово",    location: "Одинцовский р-н, Подмосковье",  price: "68 000 000 ₽",  type: "Частный дом",  area: "220 м²",  rooms: 5, floor: "2 эт.",  image: HERO_IMAGE,  tag: "Новинка",   lat: 55.6900, lng: 37.2700, purpose: "Участок 12 сот." },
+  { id: 23, title: "Дом «Поленово», Истра",          location: "Истринский р-н, Подмосковье",   price: "38 000 000 ₽",  type: "Частный дом",  area: "160 м²",  rooms: 4, floor: "2 эт.",  image: VILLA_IMAGE, tag: null,         lat: 55.9000, lng: 36.8400, purpose: "Участок 10 сот." },
+  { id: 24, title: "Дом «Дмитровское» с прудом",    location: "Дмитровское ш., 40 км",         price: "125 000 000 ₽", type: "Частный дом",  area: "450 м²",  rooms: 7, floor: "2 эт.",  image: HERO_IMAGE,  tag: "Горячее",   lat: 56.0500, lng: 37.5300, purpose: "Участок 25 сот." },
 ];
 
 const agents = [
@@ -27,7 +52,7 @@ const agents = [
   { id: 3, name: "Ирина Белова", title: "Руководитель отдела", deals: 312, rating: 5, reviews: 201, avatar: "ИБ", specialization: "Инвестиционная недвижимость", review: "Работа с Ириной — это удовольствие. Всегда на связи, всё объясняет чётко.", reviewer: "Андрей В." },
 ];
 
-const propertyTypes = ["Все", "Пентхаус", "Вилла", "Апартаменты", "Таунхаус", "Усадьба"];
+const propertyTypes = ["Все", "Пентхаус", "Вилла", "Апартаменты", "Таунхаус", "Усадьба", "Земельный участок", "Коммерческая", "Частный дом"];
 const locations = ["Все районы", "Москва, центр", "Москва, запад", "Подмосковье"];
 const priceRanges = ["Любая цена", "До 100 млн", "100–250 млн", "250–500 млн", "Свыше 500 млн"];
 
@@ -182,7 +207,7 @@ function MobileBottomNav({ current, onNav }: { current: Page; onNav: (p: Page) =
 }
 
 /* ─── PROPERTY CARD горизонтальная (мобиль) ─── */
-function PropertyCardH({ p, delay = 0 }: { p: typeof properties[0]; delay?: number }) {
+function PropertyCardH({ p, delay = 0 }: { p: PropertyType; delay?: number }) {
   return (
     <div className="luxury-card overflow-hidden flex cursor-pointer" style={{ animationDelay: `${delay}ms` }}>
       <div className="relative w-28 flex-shrink-0">
@@ -204,7 +229,10 @@ function PropertyCardH({ p, delay = 0 }: { p: typeof properties[0]; delay?: numb
         </div>
         <div>
           <div className="flex items-center gap-2.5 text-[10px] text-muted-foreground font-body mt-1.5">
-            <span>{p.area}</span><span>{p.rooms} комн.</span><span>{p.floor}</span>
+            <span>{p.area}</span>
+            {p.rooms > 0 && <span>{p.rooms} комн.</span>}
+            {p.purpose && <span>{p.purpose}</span>}
+            {p.floor !== "—" && <span>{p.floor}</span>}
           </div>
           <div className="flex items-center justify-between mt-1.5">
             <span className="font-display text-[15px] text-gold font-medium">{p.price}</span>
@@ -217,7 +245,7 @@ function PropertyCardH({ p, delay = 0 }: { p: typeof properties[0]; delay?: numb
 }
 
 /* ─── PROPERTY CARD вертикальная (десктоп) ─── */
-function PropertyCardV({ p, delay = 0 }: { p: typeof properties[0]; delay?: number }) {
+function PropertyCardV({ p, delay = 0 }: { p: PropertyType; delay?: number }) {
   return (
     <div className="luxury-card overflow-hidden group cursor-pointer" style={{ animationDelay: `${delay}ms` }}>
       <div className="relative overflow-hidden h-48">
@@ -233,10 +261,11 @@ function PropertyCardV({ p, delay = 0 }: { p: typeof properties[0]; delay?: numb
           <Icon name="MapPin" size={11} />
           <span className="font-body text-xs truncate">{p.location}</span>
         </div>
-        <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3 font-body">
+        <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3 font-body flex-wrap">
           <span className="flex items-center gap-1"><Icon name="Maximize2" size={10} />{p.area}</span>
-          <span className="flex items-center gap-1"><Icon name="BedDouble" size={10} />{p.rooms} комн.</span>
-          <span className="flex items-center gap-1"><Icon name="Building2" size={10} />{p.floor}</span>
+          {p.rooms > 0 && <span className="flex items-center gap-1"><Icon name="BedDouble" size={10} />{p.rooms} комн.</span>}
+          {p.purpose && <span className="flex items-center gap-1"><Icon name="Tag" size={10} />{p.purpose}</span>}
+          {p.floor !== "—" && <span className="flex items-center gap-1"><Icon name="Building2" size={10} />{p.floor}</span>}
         </div>
         <div className="flex items-center justify-between pt-3 border-t border-border">
           <span className="font-display text-lg text-gold font-medium">{p.price}</span>
